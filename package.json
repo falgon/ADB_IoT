@@ -1,0 +1,16 @@
+{
+  "name": "lot_system_workspace",
+  "version": "1.0.0",
+  "description": "home camera controll system",
+  "main": "index.js",
+  "scripts": {
+    "scan": "dash-button scan"
+  },
+  "author": "roki",
+  "license": "ISC",
+  "dependencies": {
+    "dash-button": "^2.0.1",
+    "jxa": "^1.1.3",
+    "slack-node": "^0.1.8"
+  }
+}
