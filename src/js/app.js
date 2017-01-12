@@ -1,5 +1,5 @@
 const DashButton=require("dash-button");
-const PHY_ADDR="34:d2:70:1a:8d:9b";
+const PHY_ADDR="xx:xx:xx:xx:xx:xx";
 let button=new DashButton(PHY_ADDR);
 
 const exec=require('child_process').exec;
