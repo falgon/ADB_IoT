@@ -1,5 +1,5 @@
 const DashButton=require("dash-button");
-const PHY_ADDR="xx:xx:xx:xx:xx:xx";
+const PHY_ADDR="34:d2:70:1a:8d:9b";
 let button=new DashButton(PHY_ADDR);
 
 const exec=require('child_process').exec;
@@ -15,7 +15,7 @@ button.addListener(()=>{
 		if(err){
 			console.log(err);
 		}else{
-			if(stdout==1){
+			if(stdout==0){
 				console.log('-- construct --------------------------------------');
 				
 				exec_1('../cpp/load_configure | espeak -a 25',(err_m,stdout_m,stderr_m)=>{
@@ -27,7 +27,7 @@ button.addListener(()=>{
 					console.log(stdout_m);
 					console.log("camera on");
 				});
-			}else if(stdout==2){
+			}else if(stdout==1){
 				console.log('-- destroy ----------------------------------------');
 				
 				exec_1('sudo killall motion && date',(err_m,stdout_m,stderr_m)=>{
